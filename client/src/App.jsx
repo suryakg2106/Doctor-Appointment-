@@ -1,8 +1,23 @@
 import React from 'react'
+import {BrowserRouter,Route, Routes} from "react-router-dom"
+import Login from './Pages/Login'
+import Home from './Pages/Home'
+import Register from './Pages/Register'
 
 function App() {
   return (
-    <div className="bg-red-500 text-white p-5">App</div>
+    <>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<Home/>}/>
+      <Route path='register' element={<Register/>}/>
+      <Route path='login' element={<Login/>}/>
+
+    </Routes>
+    </BrowserRouter>
+    
+    
+    </>
   )
 }
 
